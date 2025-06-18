@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>India Restaurant Reservation</title>
+  <style>
+    body { font-family: Arial; background: #fdf6e3; padding: 20px; }
+    .container { max-width: 600px; margin: auto; background: #fff3e0; padding: 20px; border-radius: 8px; }
+    h1 { text-align: center; color: #d84315; }
+    input, select { width: 100%; padding: 10px; margin: 10px 0; border-radius: 4px; border: 1px solid #ccc; }
+    button { background-color: #d84315; color: white; padding: 10px; border: none; width: 100%; border-radius: 4px; font-size: 16px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Reserve a Table</h1>
+    <form id="bookingForm" method="POST" action="submit.php">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <input type="tel" name="phone" placeholder="Your Phone Number" required>
+      <select name="city" required>
+        <option value="">Select City</option>
+        <option>Mumbai</option>
+        <option>Delhi</option>
+        <option>Chennai</option>
+        <option>Bangalore</option>
+        <option>Hyderabad</option>
+      </select>
+      <input type="date" name="date" required>
+      <input type="time" name="time" required>
+      <input type="number" name="guests" placeholder="No. of Guests" min="1" required>
+      <button type="submit">Book Now</button>
+    </form>
+  </div>
+</body>
+</html>
